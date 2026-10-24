@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Segregation | ECO Bengaluru</title>
+    <link rel="stylesheet" href="saaf-style.css">
+    <style>
+        /* Smart Segregation Page */
+        .seg-hero {
+            text-align: center;
+            padding: 55px 8% 35px;
+            background: linear-gradient(120deg, #e9f8ec, #f7fbf7);
+        }
+
+        .seg-hero h1 {
+            font-size: clamp(30px, 4vw, 45px);
+            margin-bottom: 12px;
+        }
+
+        .seg-hero h1 span {
+            color: #16834a;
+        }
+
+        .seg-hero p {
+            color: #587064;
+            max-width: 650px;
+            margin: auto;
+        }
+
+        .seg-search {
+            display: flex;
+            max-width: 550px;
+            margin: 25px auto 0;
+            gap: 10px;
+        }
+
+        .seg-search input {
+            flex: 1;
+            min-width: 0;
+            padding: 14px;
+            border: 1px solid #cbded0;
+            border-radius: 8px;
+            font-size: 15px;
+        }
+
+        .seg-search button {
+            background: #16834a;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            padding: 12px 18px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .seg-search button:hover {
+            background: #105d34;
+        }
+
+        .seg-content {
+            padding: 45px 8% 70px;
+        }
+
+        .seg-heading {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .seg-heading h2 {
+            font-size: 30px;
+            margin-bottom: 8px;
+        }
+
+        .seg-heading p {
+            color: #587064;
+        }
+
+        .bin-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 22px;
+        }
+
+        .bin-card {
+            background: white;
+            border-radius: 15px;
+            padding: 26px;
+            border: 1px solid #e4eee6;
+            box-shadow: 0 5px 20px #00000008;
+        }
+
+        .bin-icon {
+            font-size: 48px;
+            margin-bottom: 12px;
+        }
+
+        .bin-card h3 {
+            font-size: 21px;
+            margin-bottom: 10px;
+        }
+
+        .bin-card p {
+            color: #587064;
+            font-size: 14px;
+            margin-bottom: 15px;
+        }
+
+        .bin-card ul {
+            list-style: none;
+            margin-bottom: 15px;
+        }
+
+        .bin-card li {
+            padding: 7px 0;
+            border-bottom: 1px solid #edf2ee;
+            font-size: 14px;
+        }
+
+        .bin-label {
+            display: inline-block;
+            padding: 6px 11px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: bold;
+        }
+
+        .wet-label {
+            background: #e1f4e6;
+            color: #187747;
+        }
+
+        .dry-label {
+            background: #e1efff;
+            color: #205b9c;
+        }
+
+        .special-label {
+            background: #fff0d9;
+            color: #925500;
+        }
+
+        .tip-box {
+            margin-top: 35px;
+            padding: 25px;
+            border-radius: 12px;
+            background: #e9f6eb;
+            text-align: center;
+        }
+
+        .tip-box h3 {
+            margin-bottom: 8px;
+        }
+
+        .tip-box p {
+            color: #466453;
+        }
+
+        .search-result {
+            display: none;
+            max-width: 550px;
+            margin: 15px auto 0;
+            padding: 16px;
+            border-radius: 10px;
+            background: white;
+            border: 1px solid #cbded0;
+            text-align: left;
+        }
+
+        .search-result.show {
+            display: block;
+        }
+
+        .search-result h3 {
+            color: #16834a;
+            margin-bottom: 5px;
+        }
+
+        .search-result p {
+            color: #587064;
+        }
+
+        .bin-card.hidden {
+            display: none;
+        }
+
+        @media (max-width: 850px) {
+            .bin-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .bin-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .seg-search {
+                flex-direction: column;
+            }
+
+            .seg-hero {
+                padding: 40px 6%;
+            }
+
+            .seg-content {
+                padding: 35px 6%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <header>
+        <nav class="navbar">
+            <a href="index.html" class="logo">♻ ECO Bengaluru</a>
+
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li><li><a href="rewards.html">Rewards</a></li>
+                <li><a href="#categories">Segregation</a></li>
+                <li><a href="#tips">Tips</a></li>
+            </ul>
+
+            <a href="index.html" class="nav-button">Home</a>
+        </nav>
+    </header>
+
+    <!-- Hero -->
+    <section class="seg-hero">
+        <p class="tagline">SMART WASTE MANAGEMENT</p>
+
+        <h1>Sort It Right.<br>
+            <span>Keep Bengaluru Bright!</span>
+        </h1>
+
+        <p>
+            Not sure where your waste belongs?
+            Search for an item below and learn how to dispose
+            of it responsibly.
+        </p>
+
+        <!-- Waste Search -->
+        <form class="seg-search" id="wasteSearch">
+            <input
+                type="text"
+                id="wasteInput"
+                placeholder="Try banana peel, newspaper, battery..."
+                aria-label="Search for a waste item"
+                required
+            >
+            <button type="submit">Find My Bin 🔍</button>
+        </form>
+
+        <div class="search-result" id="searchResult" aria-live="polite"></div>
+    </section>
+
+    <!-- Waste Categories -->
+    <section class="seg-content" id="categories">
+
+        <div class="seg-heading">
+            <p class="tagline">KNOW YOUR WASTE</p>
+            <h2>Choose the Right Category</h2>
+            <p>Keep different types of waste separate at home.</p>
+        </div>
+
+        <div class="bin-grid">
+
+            <!-- Wet Waste -->
+            <article class="bin-card">
+                <div class="bin-icon">🟢</div>
+                <span class="bin-label wet-label">WET WASTE</span>
+                <h3>Organic Waste</h3>
+                <p>
+                    Biodegradable waste from your kitchen
+                    and food preparation.
+                </p>
+
+                <ul>
+                    <li>🍌 Fruit and vegetable peels</li>
+                    <li>🍚 Leftover food</li>
+                    <li>☕ Tea leaves and coffee grounds</li>
+                    <li>🥚 Eggshells</li>
+                    <li>🍂 Garden leaves</li>
+                </ul>
+
+                <strong>Tip:</strong>
+                <p>Keep food waste separate from plastic and paper.</p>
+            </article>
+
+            <!-- Dry Waste -->
+            <article class="bin-card">
+                <div class="bin-icon">🔵</div>
+                <span class="bin-label dry-label">DRY WASTE</span>
+                <h3>Recyclable Materials</h3>
+                <p>
+                    Clean, dry materials that can often be
+                    reused or sent for recycling.
+                </p>
+
+                <ul>
+                    <li>📰 Newspapers and paper</li>
+                    <li>🥤 Clean plastic bottles</li>
+                    <li>📦 Cardboard boxes</li>
+                    <li>🥫 Metal cans</li>
+                    <li>🍾 Glass bottles</li>
+                </ul>
+
+                <strong>Tip:</strong>
+                <p>Empty and keep recyclable packaging dry.</p>
+            </article>
+
+            <!-- Special Waste -->
+            <article class="bin-card">
+                <div class="bin-icon">🟠</div>
+                <span class="bin-label special-label">SPECIAL WASTE</span>
+                <h3>Handle Separately</h3>
+                <p>
+                    Items that need special collection
+                    or careful disposal.
+                </p>
+
+                <ul>
+                    <li>🔋 Batteries</li>
+                    <li>💡 Used electronic items</li>
+                    <li>💊 Expired medicines</li>
+                    <li>🧴 Paint or chemical containers</li>
+                    <li>🩹 Sanitary and medical waste</li>
+                </ul>
+
+                <strong>Tip:</strong>
+                <p>Follow local collection rules. Never mix hazardous items with ordinary waste.</p>
+            </article>
+
+        </div>
+
+        <!-- Helpful Tips -->
+        <div class="tip-box" id="tips">
+            <h3>🌱 ECO Bengaluru's Golden Rule</h3>
+            <p>
+                Segregate waste at the source, keep different
+                categories separate, and follow your local
+                municipal collection guidelines.
+            </p>
+        </div>
+
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <h3>♻ ECO Bengaluru Bengaluru</h3>
+        <p>Segregate. Scan. Earn. Recycle.</p>
+        <p class="copyright">
+            Small actions create a cleaner tomorrow.
+        </p>
+    </footer>
+
+    <!-- Simple Waste Search -->
+    <script>
+        const wasteGuide = {
+            "banana peel": {
+                category: "Wet Waste",
+                advice: "Place food scraps in the designated wet-waste container."
+            },
+            "vegetable peel": {
+                category: "Wet Waste",
+                advice: "Keep vegetable scraps separate from dry recyclables."
+            },
+            "leftover food": {
+                category: "Wet Waste",
+                advice: "Keep food waste separate from packaging."
+            },
+            "tea leaves": {
+                category: "Wet Waste",
+                advice: "Collect used tea leaves with organic waste."
+            },
+            "newspaper": {
+                category: "Dry Waste",
+                advice: "Keep paper clean and dry for recycling."
+            },
+            "cardboard": {
+                category: "Dry Waste",
+                advice: "Keep cardboard clean and dry. Flatten boxes if possible."
+            },
+            "plastic bottle": {
+                category: "Dry Waste",
+                advice: "Empty the bottle and follow local recycling instructions."
+            },
+            "glass bottle": {
+                category: "Dry Waste",
+                advice: "Keep glass separate and handle carefully. Follow local collection rules."
+            },
+            "metal can": {
+                category: "Dry Waste",
+                advice: "Empty the can and keep it separate for recycling."
+            },
+            "battery": {
+                category: "Special Waste",
+                advice: "Take used batteries to an authorized collection point. Do not put them in ordinary bins."
+            },
+            "mobile phone": {
+                category: "Special Waste",
+                advice: "Send unwanted electronics to an authorized e-waste collection point."
+            },
+            "old charger": {
+                category: "Special Waste",
+                advice: "Collect electronic accessories separately for authorized e-waste disposal."
+            },
+            "expired medicine": {
+                category: "Special Waste",
+                advice: "Ask a pharmacy or authorized collection service about safe disposal. Do not flush medicines."
+            },
+            "paint": {
+                category: "Special Waste",
+                advice: "Follow the product label and local hazardous-waste collection instructions."
+            },
+            "sanitary waste": {
+                category: "Special Waste",
+                advice: "Wrap and dispose of it according to local municipal guidance. Do not mix it with recyclables."
+            }
+        };
+
+        const form = document.getElementById("wasteSearch");
+        const input = document.getElementById("wasteInput");
+        const result = document.getElementById("searchResult");
+
+        form.addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            const item = input.value.trim().toLowerCase();
+            const match = wasteGuide[item];
+
+            result.classList.add("show");
+
+            if (match) {
+                result.innerHTML = `
+                    <h3>Category: ${match.category}</h3>
+                    <p>${match.advice}</p>
+                `;
+            } else {
+                result.innerHTML = `
+                    <h3>Item not found yet</h3>
+                    <p>Try a listed example, such as banana peel,
+                    newspaper, plastic bottle or battery.
+                    If unsure, check your local waste collection guidelines.</p>
+                `;
+            }
+        });
+    </script>
+
+</body>
+</html>
+

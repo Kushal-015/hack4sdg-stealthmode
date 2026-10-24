@@ -1,0 +1,372 @@
+
+/* Rewards Page */
+.reward-hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    padding: 75px 8%;
+    background: linear-gradient(120deg, #e4f7e8, #f8fcf8);
+}
+
+.reward-hero > div {
+    flex: 1;
+}
+
+.reward-tag {
+    color: #16834a;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    margin-bottom: 12px;
+}
+
+.reward-hero h1 {
+    font-size: clamp(38px, 5vw, 58px);
+    line-height: 1.15;
+    margin-bottom: 20px;
+}
+
+.reward-hero h1 span {
+    color: #16834a;
+}
+
+.reward-hero > div:first-child > p:not(.reward-tag) {
+    color: #587064;
+    max-width: 500px;
+    margin-bottom: 25px;
+}
+
+.reward-main-btn {
+    display: inline-block;
+    padding: 13px 23px;
+    background: #16834a;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+.reward-main-btn:hover {
+    background: #105d34;
+}
+
+.reward-illustration {
+    text-align: center;
+    background: white;
+    border-radius: 25px;
+    padding: 35px 20px;
+    box-shadow: 0 10px 30px #0000000d;
+}
+
+.trophy {
+    font-size: 100px;
+    margin-bottom: 10px;
+}
+
+.reward-illustration h2 {
+    color: #16834a;
+    margin-bottom: 8px;
+}
+
+.reward-illustration p {
+    color: #587064;
+}
+
+/* Points Balance */
+.points-section {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+    padding: 40px 8%;
+}
+
+.points-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px;
+    border-radius: 18px;
+    background: linear-gradient(120deg, #167b43, #229e5c);
+    color: white;
+}
+
+.small-label {
+    font-size: 12px;
+    letter-spacing: 1.5px;
+    margin-bottom: 8px;
+}
+
+.points-card h2 {
+    font-size: 42px;
+    margin-bottom: 5px;
+}
+
+.points-card h2 small {
+    font-size: 17px;
+}
+
+.points-icon {
+    font-size: 60px;
+}
+
+.stats-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+    padding: 25px;
+    background: white;
+    border: 1px solid #e4eee6;
+    border-radius: 18px;
+}
+
+.stats-card > span {
+    font-size: 38px;
+}
+
+.stats-card h3 {
+    font-size: 30px;
+    color: #16834a;
+}
+
+.stats-card p {
+    color: #587064;
+    font-size: 14px;
+}
+
+/* Section Headings */
+.earn-section,
+.rewards-section {
+    padding: 65px 8%;
+}
+
+.earn-section {
+    background: #f0f8f1;
+}
+
+.reward-heading {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.reward-heading h2 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.reward-heading > p:last-child {
+    color: #587064;
+}
+
+/* Earning Cards */
+.earn-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.earn-card {
+    padding: 28px;
+    text-align: center;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px #00000008;
+    transition: transform 0.3s;
+}
+
+.earn-card:hover,
+.reward-card:hover {
+    transform: translateY(-5px);
+}
+
+.earn-icon {
+    font-size: 42px;
+    margin-bottom: 12px;
+}
+
+.earn-card h3 {
+    margin-bottom: 10px;
+}
+
+.earn-card p {
+    color: #587064;
+    font-size: 14px;
+    margin-bottom: 18px;
+}
+
+.points-label {
+    display: inline-block;
+    background: #e2f6e7;
+    color: #16834a;
+    padding: 7px 15px;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+.demo-note {
+    text-align: center;
+    font-size: 12px;
+    color: #68796e;
+    margin-top: 20px;
+}
+
+/* Rewards Catalogue */
+.rewards-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.reward-card {
+    background: white;
+    border: 1px solid #e5eee7;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px #00000008;
+    transition: transform 0.3s;
+}
+
+.reward-image {
+    min-height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #e8f6eb;
+    font-size: 65px;
+}
+
+.reward-content {
+    padding: 20px;
+}
+
+.reward-category {
+    font-size: 10px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: #16834a;
+}
+
+.reward-content h3 {
+    margin: 8px 0;
+    font-size: 18px;
+}
+
+.reward-content p {
+    min-height: 65px;
+    color: #587064;
+    font-size: 13px;
+}
+
+.reward-bottom {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 15px;
+}
+
+.reward-bottom strong {
+    color: #16834a;
+    font-size: 18px;
+}
+
+.redeem-btn {
+    padding: 11px;
+    border: none;
+    border-radius: 8px;
+    background: #16834a;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.redeem-btn:hover {
+    background: #105d34;
+}
+
+.reward-message {
+    margin-top: 25px;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    font-weight: bold;
+    display: none;
+}
+
+.reward-message.success,
+.reward-message.error {
+    display: block;
+}
+
+.reward-message.success {
+    background: #e2f6e7;
+    color: #126c39;
+}
+
+.reward-message.error {
+    background: #fff0ed;
+    color: #b83225;
+}
+
+/* Responsive Layout */
+@media (max-width: 950px) {
+    .rewards-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .points-section {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .reward-hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 55px 6%;
+    }
+
+    .reward-hero > div:first-child > p:not(.reward-tag) {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .reward-illustration {
+        width: 100%;
+    }
+
+    .earn-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .earn-section,
+    .rewards-section {
+        padding: 50px 6%;
+    }
+
+    .reward-heading h2 {
+        font-size: 27px;
+    }
+}
+
+@media (max-width: 480px) {
+    .rewards-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .points-card {
+        padding: 22px;
+    }
+
+    .points-card h2 {
+        font-size: 34px;
+    }
+
+    .points-icon {
+        font-size: 42px;
+    }
+
+    .stats-card {
+        justify-content: flex-start;
+    }
+}

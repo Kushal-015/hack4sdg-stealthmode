@@ -1,0 +1,239 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ECO Bengaluru | Green Rewards</title>
+
+    <!-- Existing website stylesheet -->
+    <link rel="stylesheet" href="saaf-style.css">
+
+    <!-- Rewards page stylesheet -->
+    <link rel="stylesheet" href="rewards.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <header>
+        <nav class="navbar">
+            <a href="index.html" class="logo">♻ ECO Bengaluru</a>
+
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li><li><a href="segregation.html">Segregation guide</a></li>
+                <li><a href="index.html#report">Track Collection</a></li>
+                <li><a href="rewards.html">Rewards</a></li>
+            </ul>
+
+            <a href="#rewards" class="nav-button">Redeem Points</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="reward-hero">
+        <div>
+            <p class="reward-tag">♻ YOUR GREEN EFFORTS MATTER</p>
+
+            <h1>Recycle More.<br>
+                <span>Earn More.</span>
+            </h1>
+
+            <p>
+                Segregate your waste responsibly, earn Green Points
+                and turn your everyday efforts into exciting rewards.
+            </p>
+
+            <a href="#rewards" class="reward-main-btn">
+                Explore Rewards →
+            </a>
+        </div>
+
+        <div class="reward-illustration">
+            <div class="trophy">🏆</div>
+            <h2>Make Every Action Count!</h2>
+            <p>Small actions. Big impact.</p>
+        </div>
+    </section>
+
+    <!-- Points Balance -->
+    <section class="points-section">
+        <div class="points-card">
+            <div>
+                <p class="small-label">YOUR GREEN POINTS</p>
+                <h2><span id="points">0</span> <small>GP</small></h2>
+                <p>Keep segregating to earn more!</p>
+            </div>
+
+            <div class="points-icon">🌱</div>
+        </div>
+
+        <div class="stats-card">
+            <span>♻️</span>
+            <div>
+                <h3 id="redeemed-count">0</h3>
+                <p>Rewards Redeemed</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- How to Earn Points -->
+    <section class="earn-section">
+        <div class="reward-heading">
+            <p class="reward-tag">EARN GREEN POINTS</p>
+            <h2>How to Earn</h2>
+            <p>Make sustainable choices and collect points.</p>
+        </div>
+
+        <div class="earn-grid">
+            <div class="earn-card">
+                <div class="earn-icon">🥬</div>
+                <h3>Segregate Wet Waste</h3>
+                <p>Keep food scraps and other wet waste separate.</p>
+                <span class="points-label">+20 GP</span>
+            </div>
+
+            <div class="earn-card">
+                <div class="earn-icon">♻️</div>
+                <h3>Segregate Dry Waste</h3>
+                <p>Separate recyclable paper, plastic and metal.</p>
+                <span class="points-label">+30 GP</span>
+            </div>
+
+            <div class="earn-card">
+                <div class="earn-icon">🚛</div>
+                <h3>Verified Collection</h3>
+                <p>Get your properly segregated waste recorded.</p>
+                <span class="points-label">+50 GP</span>
+            </div>
+        </div>
+
+        <p class="demo-note">
+            Example point values for the prototype. Real points would
+            depend on verified collection records.
+        </p>
+    </section>
+
+    <!-- Rewards Catalogue -->
+    <section class="rewards-section" id="rewards">
+        <div class="reward-heading">
+            <p class="reward-tag">YOUR EFFORTS, YOUR REWARDS</p>
+            <h2>Redeem Your Green Points</h2>
+            <p>Choose a reward and use your earned points.</p>
+        </div>
+
+        <div class="rewards-grid">
+
+            <div class="reward-card">
+                <div class="reward-image">🚌</div>
+                <div class="reward-content">
+                    <span class="reward-category">TRAVEL</span>
+                    <h3>Transport Discount</h3>
+                    <p>Sample public transport discount voucher.</p>
+                    <div class="reward-bottom">
+                        <strong>300 GP</strong>
+                        <button class="redeem-btn"
+                            data-cost="300"
+                            data-name="Transport Discount">
+                            Redeem
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="reward-card">
+                <div class="reward-image">🌿</div>
+                <div class="reward-content">
+                    <span class="reward-category">ECO LIVING</span>
+                    <h3>Eco-Friendly Kit</h3>
+                    <p>A sample reusable and sustainable products kit.</p>
+                    <div class="reward-bottom">
+                        <strong>500 GP</strong>
+                        <button class="redeem-btn"
+                            data-cost="500"
+                            data-name="Eco-Friendly Kit">
+                            Redeem
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="reward-card">
+                <div class="reward-image">🪴</div>
+                <div class="reward-content">
+                    <span class="reward-category">GARDENING</span>
+                    <h3>Plant Starter Kit</h3>
+                    <p>Start your own small green corner at home.</p>
+                    <div class="reward-bottom">
+                        <strong>200 GP</strong>
+                        <button class="redeem-btn"
+                            data-cost="200"
+                            data-name="Plant Starter Kit">
+                            Redeem
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="reward-card">
+                <div class="reward-image">🏅</div>
+                <div class="reward-content">
+                    <span class="reward-category">RECOGNITION</span>
+                    <h3>Green Champion</h3>
+                    <p>A sample certificate for responsible waste habits.</p>
+                    <div class="reward-bottom">
+                        <strong>150 GP</strong>
+                        <button class="redeem-btn"
+                            data-cost="150"
+                            data-name="Green Champion Certificate">
+                            Redeem
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Message area -->
+        <p id="reward-message" class="reward-message"
+            role="status" aria-live="polite"></p>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <h3>♻ ECO Bengaluru</h3>
+        <p>Segregate. Scan. Earn. Recycle.</p>
+        <p class="copyright">
+            Building a cleaner, greener tomorrow.
+        </p>
+    </footer>
+
+    <script>
+    (() => {
+      const userKey='ecoDemoCurrentUser';
+      const collectionsKey='ecoDemoCollections';
+      const redemptionsKey='ecoDemoRedemptions';
+      const pointsEl=document.getElementById('points');
+      const redeemedEl=document.getElementById('redeemed-count');
+      const message=document.getElementById('reward-message');
+      const buttons=[...document.querySelectorAll('.redeem-btn')];
+      let user=null;
+      try { user=JSON.parse(sessionStorage.getItem(userKey)||'null'); } catch {}
+      function getList(key){try{const x=JSON.parse(localStorage.getItem(key)||'[]');return Array.isArray(x)?x:[];}catch{return[];}}
+      const household=user?.role==='Customer'?user.household_id:null;
+      const earned=()=>getList(collectionsKey).filter((r)=>r.status==='Approved'&&String(r.household).toUpperCase()===String(household).toUpperCase()).reduce((n,r)=>n+(Number(r.pointsEarned)||0),0);
+      const redemptions=()=>getList(redemptionsKey);
+      const spent=()=>redemptions().filter((r)=>String(r.household).toUpperCase()===String(household).toUpperCase()).reduce((n,r)=>n+(Number(r.cost)||0),0);
+      const balance=()=>Math.max(0,earned()-spent());
+      function update(){pointsEl.textContent=household?balance():0;redeemedEl.textContent=household?redemptions().filter((r)=>String(r.household).toUpperCase()===String(household).toUpperCase()).length:0;}
+      update();
+      if(!household){message.textContent='Log in as a customer from the home page to view and redeem your household points.';message.className='reward-message';}
+      buttons.forEach((button)=>{button.disabled=!household;button.addEventListener('click',()=>{if(!household)return;const cost=Number(button.dataset.cost);if(balance()<cost){message.textContent='Not enough Green Points. Approved collections add points to your balance.';message.className='reward-message error';return;}const rows=redemptions();rows.push({household,cost,name:button.dataset.name,created:new Date().toISOString()});try{localStorage.setItem(redemptionsKey,JSON.stringify(rows));update();message.textContent=`Demo redemption successful: ${button.dataset.name}. Remaining balance: ${balance()} GP.`;message.className='reward-message success';}catch{message.textContent='This browser could not save the redemption.';message.className='reward-message error';}});});
+    })();
+    </script>
+</body>
+</html>
+
+
+
+
+

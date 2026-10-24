@@ -1,0 +1,554 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ECO Bengaluru — Smarter Waste Collection</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<!-- ECO Bengaluru Intro Animation -->
+    <div id="intro" data-s="splash" role="region" aria-label="ECO Bengaluru introduction">
+        <button class="intro-skip" type="button">Skip intro</button>
+
+        <section class="screen" id="splash">
+            <h1>ECO<span> Bengaluru</span></h1>
+            <p>Smart waste collection for a cleaner Bengaluru</p>
+        </section>
+
+        <section class="screen" id="loader">
+            <div class="stage">
+
+                <!-- Scene 1: Cleaning -->
+                <div class="scene">
+                    <svg viewBox="0 0 240 200">
+                        <line x1="20" y1="170" x2="220" y2="170"
+                              stroke="#5d6e63" stroke-width="3"
+                              stroke-linecap="round"/>
+
+                        <rect x="79" y="136" width="8" height="34"
+                              rx="3" fill="#2c3a32"/>
+                        <rect x="93" y="136" width="8" height="34"
+                              rx="3" fill="#2c3a32"/>
+
+                        <rect x="76" y="86" width="28" height="54"
+                              rx="13" fill="#17794a"/>
+
+                        <circle cx="90" cy="68" r="14" fill="#c98f62"/>
+                        <path d="M76 66a14 14 0 0 1 28 0z"
+                              fill="#2c3a32"/>
+
+                        <g class="broom">
+                            <line x1="98" y1="100" x2="140" y2="152"
+                                  stroke="#c98f62" stroke-width="5"
+                                  stroke-linecap="round"/>
+                            <line x1="104" y1="108" x2="140" y2="152"
+                                  stroke="#2c3a32" stroke-width="3"/>
+                            <path d="M130 150l24 6-6 16-26-5z"
+                                  fill="#f2b632"/>
+                        </g>
+
+                        <circle class="dust" cx="156" cy="164" r="3"
+                                fill="#5d6e63"/>
+                        <circle class="dust" cx="164" cy="166" r="2.5"
+                                fill="#4c9a2a"
+                                style="animation-delay:.3s"/>
+                        <circle class="dust" cx="150" cy="167" r="2.5"
+                                fill="#5d6e63"
+                                style="animation-delay:.6s"/>
+                    </svg>
+                    <b>Keep your street clean</b>
+                </div>
+
+                <!-- Scene 2: Waste Collection -->
+                <div class="scene">
+                    <svg viewBox="0 0 240 200">
+                        <line x1="20" y1="170" x2="220" y2="170"
+                              stroke="#5d6e63" stroke-width="3"
+                              stroke-linecap="round"/>
+
+                        <rect x="54" y="136" width="8" height="34"
+                              rx="3" fill="#2c3a32"/>
+                        <rect x="68" y="136" width="8" height="34"
+                              rx="3" fill="#2c3a32"/>
+                        <rect x="51" y="86" width="28" height="54"
+                              rx="13" fill="#17794a"/>
+                        <circle cx="65" cy="68" r="14" fill="#c98f62"/>
+                        <path d="M51 66a14 14 0 0 1 28 0z"
+                              fill="#2c3a32"/>
+
+                        <rect x="164" y="136" width="8" height="34"
+                              rx="3" fill="#2c3a32"/>
+                        <rect x="178" y="136" width="8" height="34"
+                              rx="3" fill="#2c3a32"/>
+                        <rect x="161" y="86" width="28" height="54"
+                              rx="13" fill="#f2b632"/>
+                        <circle cx="175" cy="68" r="14" fill="#c98f62"/>
+                        <path d="M161 64a14 14 0 0 1 28 0zM186 64h10v4h-10z"
+                              fill="#17794a"/>
+
+                        <line x1="74" y1="100" x2="108" y2="112"
+                              stroke="#c98f62" stroke-width="5"
+                              stroke-linecap="round"/>
+                        <line x1="166" y1="100" x2="132" y2="112"
+                              stroke="#c98f62" stroke-width="5"
+                              stroke-linecap="round"/>
+
+                        <g class="bag">
+                            <path d="M108 112q12-12 24 0v24q-12 7-24 0z"
+                                  fill="#4c9a2a"/>
+                            <path d="M114 108l6-8 6 8"
+                                  fill="none" stroke="#4c9a2a"
+                                  stroke-width="3"/>
+                        </g>
+                    </svg>
+                    <b>Hand it over</b>
+                </div>
+
+                <!-- Scene 3: Segregation -->
+                <div class="scene">
+                    <svg viewBox="0 0 240 200">
+                        <line x1="20" y1="170" x2="220" y2="170"
+                              stroke="#5d6e63" stroke-width="3"
+                              stroke-linecap="round"/>
+
+                        <path d="M40 104h70l-6 66H46z" fill="#4c9a2a"/>
+                        <rect x="34" y="94" width="82" height="12"
+                              rx="5" fill="#4c9a2a" opacity=".75"/>
+
+                        <path d="M130 104h70l-6 66h-58z" fill="#2f6fd6"/>
+                        <rect x="124" y="94" width="82" height="12"
+                              rx="5" fill="#2f6fd6" opacity=".75"/>
+
+                        <text x="75" y="146" text-anchor="middle"
+                              font-size="16" font-weight="800" fill="#fff">
+                            Wet
+                        </text>
+                        <text x="165" y="146" text-anchor="middle"
+                              font-size="16" font-weight="800" fill="#fff">
+                            Dry
+                        </text>
+
+                        <g class="item i1">
+                            <path d="M62 70q14-14 28 0q-14 6-28 0z"
+                                  fill="#f2b632"/>
+                        </g>
+
+                        <g class="item i2">
+                            <rect x="158" y="56" width="14" height="30"
+                                  rx="5" fill="#5fc8e6"/>
+                            <rect x="162" y="48" width="6" height="9"
+                                  rx="2" fill="#5fc8e6"/>
+                        </g>
+                    </svg>
+                    <b>Wet and dry, separate</b>
+                </div>
+
+            </div>
+
+            <p class="tag">Segregate. Scan. Earn.</p>
+            <p class="sub">Getting your ward ready</p>
+        </section>
+    </div>
+
+
+
+<nav>
+  <div class="wrap navin">
+    <a class="brand" href="#" onclick="showLanding();return false">
+      <span class="logo">♻</span>
+      <span>ECO Bengaluru<small>SMART WASTE • CLEAN CITY</small></span>
+    </a>
+    <div class="navlinks">
+      <a href="#how">How it works</a>
+      <a href="#features">Solutions</a>
+      <a href="#impact">Our impact</a>
+      <a href="#report">Report waste</a>
+      <a href="segregation.html">Segregation guide</a>
+      <a href="rewards.html">Rewards</a>
+    </div>
+    <div class="navactions">
+      <button class="btn outline" onclick="openLogin('Customer')">Log in</button>
+      <button class="btn primary" onclick="openLogin('Admin')">Open dashboard ↗</button>
+    </div>
+  </div>
+</nav>
+
+<main id="landing">
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <div class="eyebrow">
+          <span class="dot"></span>
+          A smarter Bengaluru starts here
+        </div>
+        <h1>Smarter Waste Collection.
+          <span>Cleaner Bengaluru.</span>
+        </h1>
+        <p>
+          Track every collection, verify every bag, reward responsible
+          households, and make Bengaluru cleaner through technology.
+        </p>
+        <div class="hero-buttons">
+          <button class="btn primary" onclick="openLogin('Customer')">
+            Get started →
+          </button>
+          <button class="btn outline"
+            onclick="document.querySelector('#how').scrollIntoView({behavior:'smooth'})">
+            Explore how it works
+          </button>
+        </div>
+        <div class="micro">♻ Segregate. Scan. Earn. Build a Cleaner Bengaluru.</div>
+      </div>
+
+      <div class="visual">
+        <div class="visual-top">
+          <div class="visual-title">City collection overview / DEMO</div>
+          <span class="live">● DEMO MODE</span>
+        </div>
+        <div class="mapbox">
+          <div class="road"></div>
+          <div class="road r2"></div>
+          <div class="pin p1"><span>♻</span></div>
+          <div class="pin p2"><span>✓</span></div>
+          <div class="pin p3"><span>↗</span></div>
+          <div class="maplabel l1">Collection route</div>
+          <div class="maplabel l2">Verification centre</div>
+        </div>
+        <div class="mini-stats">
+          <div class="mini-stat">
+            <b id="heroHouseholds">10</b><small>Demo households</small>
+          </div>
+          <div class="mini-stat">
+            <b id="heroBags">24</b><small>Sample bag records</small>
+          </div>
+          <div class="mini-stat">
+            <b id="heroPoints">1,240</b><small>Sample points</small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="features">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="kicker">One connected ecosystem</div>
+        <h2>Every bag has a story.</h2>
+        <p>From household segregation to verified collection, ECO Bengaluru
+          brings accountability and transparency to each step.</p>
+      </div>
+
+      <div class="features">
+        <div class="feature">
+          <div class="ficon">▦</div>
+          <h3>Smart Trash Card</h3>
+          <p>A unique household QR card helps collectors identify registered
+            homes without exposing personal details in the QR itself.</p>
+        </div>
+        <div class="feature">
+          <div class="ficon">🏷</div>
+          <h3>QR-coded bag tags</h3>
+          <p>Every wet or dry bag receives its own unique ID, category,
+            recorded weight and printable label.</p>
+        </div>
+        <div class="feature">
+          <div class="ficon">✓</div>
+          <h3>Central verification</h3>
+          <p>Authorised staff review each bag and approve or reject it.
+            Pending bags never earn points.</p>
+        </div>
+        <div class="feature">
+          <div class="ficon">🌱</div>
+          <h3>Verified rewards</h3>
+          <p>A transparent ledger credits eligible points only after approval
+            and blocks duplicate rewards.</p>
+        </div>
+        <div class="feature">
+          <div class="ficon">⌖</div>
+          <h3>Vehicle tracking</h3>
+          <p>View assigned routes and reported locations. Simulated GPS is
+            clearly labelled until real devices connect.</p>
+        </div>
+        <div class="feature">
+          <div class="ficon">📷</div>
+          <h3>Report a hotspot</h3>
+          <p>Share a garbage issue, add a photo and location, then follow
+            its progress through resolution.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="how" style="background:#eff7f0">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="kicker">Simple. Traceable. Fair.</div>
+        <h2>How ECO Bengaluru works</h2>
+        <p>A clear chain of custody helps households, collectors and
+          verification teams work together.</p>
+      </div>
+      <div class="steps">
+        <div class="step">
+          <div class="step-num">STEP 01</div>
+          <h4>Register household</h4>
+          <p>Receive a unique Smart Trash Card with a secure QR identity.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">STEP 02</div>
+          <h4>Segregate waste</h4>
+          <p>Keep wet and dry waste separate in individual bags.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">STEP 03</div>
+          <h4>Scan &amp; tag</h4>
+          <p>Collector records category and weight, then prints a unique bag tag.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">STEP 04</div>
+          <h4>Verify the bag</h4>
+          <p>Verification staff inspect and approve or reject the collection record.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">STEP 05</div>
+          <h4>Earn points</h4>
+          <p>Eligible points are credited once, after successful verification.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="impact">
+    <div class="wrap">
+      <div class="cta">
+        <div>
+          <h2>Small habits. City-wide impact.</h2>
+          <p>Start with one household, one correctly sorted bag, and one
+            accountable collection.<br>
+            Help build a cleaner Bengaluru together.</p>
+        </div>
+        <button class="btn" onclick="openLogin('Customer')">
+          Explore your Trash Card →
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="report" style="padding-top:0">
+    <div class="wrap">
+      <div class="panel" style="max-width:780px;margin:auto">
+        <div class="panel-head">
+          <div>
+            <h3>Report a waste hotspot</h3>
+            <div class="panel-sub">Demo reports are saved in this browser only.</div>
+          </div>
+          <span class="ficon">📍</span>
+        </div>
+        <form id="publicReportForm" class="form-grid">
+          <div class="field">
+            <label>Issue type</label>
+            <select class="form-control" name="type">
+              <option>Overflowing garbage</option>
+              <option>Illegal dumping</option>
+              <option>Mixed wet and dry waste</option>
+              <option>Missed collection</option>
+              <option>Public-bin damage</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="field">
+            <label>Locality</label>
+            <input class="form-control" name="location" required
+              placeholder="e.g. Indiranagar">
+          </div>
+          <div class="field full">
+            <label>Description</label>
+            <textarea class="form-control" name="description" rows="3"
+              required placeholder="Describe the issue and nearby landmark"></textarea>
+          </div>
+          <div class="field">
+            <label>Photo (optional)</label>
+            <input class="form-control" name="photo" type="file" accept="image/*">
+          </div>
+          <div class="field" style="display:flex;align-items:end">
+            <button class="btn primary" type="submit">Submit report ↗</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+
+<section id="dashboard" class="dashboard">
+  <div class="dash-layout">
+    <aside class="sidebar">
+      <div class="side-label">WORKSPACE</div>
+      <button class="side-link active" data-page="overview"
+        onclick="goPage('overview',this)">▦ Overview</button>
+      <button class="side-link" data-page="bags"
+        onclick="goPage('bags',this)">▤ Bag records</button>
+      <button class="side-link" data-page="collect"
+        onclick="goPage('collect',this)">＋ Record collection</button>
+      <button class="side-link" data-page="verify"
+        onclick="goPage('verify',this)">✓ Verification centre</button>
+      <button class="side-link" data-page="rewards"
+        onclick="goPage('rewards',this)">✦ Rewards ledger</button>
+      <button class="side-link" data-page="complaints"
+        onclick="goPage('complaints',this)">⚑ Complaints</button>
+      <button class="side-link" data-page="trashcard"
+        onclick="goPage('trashcard',this)">▧ Smart Trash Card</button>
+      <button class="side-link" onclick="logout()">↩ Log out</button>
+    </aside>
+
+    <div class="dash-main">
+      <div class="dash-top">
+        <div>
+          <h1 id="dashTitle">Overview</h1>
+          <p id="dashSubtitle">Welcome back. Here's your waste management snapshot.</p>
+        </div>
+        <div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap">
+          <span class="role-chip" id="activeRoleChip">Signed in</span>
+          <button class="btn primary" onclick="openModal('collect')">＋ New collection</button>
+        </div>
+      </div>
+      <div id="pageContent"></div>
+    </div>
+  </div>
+</section>
+
+<!-- Phone-number login modal -->
+<div class="modal-backdrop login-backdrop" id="loginBackdrop"
+  onclick="if(event.target===this)closeLogin()">
+  <div class="modal login-modal" role="dialog" aria-modal="true"
+    aria-labelledby="loginTitle">
+    <div class="modal-head">
+      <div>
+        <div class="eyebrow">STAFF ACCESS</div>
+        <h3 id="loginTitle">Log in to ECO Bengaluru</h3>
+      </div>
+      <button class="close" type="button" onclick="closeLogin()">✕</button>
+    </div>
+
+    <p class="login-intro">
+      Use the phone number and password assigned to your role. No email is required.
+    </p>
+
+    <form id="loginForm" class="login-form">
+      <div class="field">
+        <label for="loginRole">Portal / role</label>
+        <select class="form-control" id="loginRole" required>
+          <option value="Admin">Admin</option>
+          <option value="Collector">Garbage Collector</option>
+          <option value="Verifier">Verification Centre</option>
+          <option value="Customer">Customer / Household</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="loginPhone">Phone number</label>
+        <input class="form-control" id="loginPhone" type="tel"
+          inputmode="numeric" autocomplete="username"
+          pattern="[0-9]{10}" maxlength="10"
+          placeholder="10-digit phone number" required>
+      </div>
+      <div class="field password-field">
+        <label for="loginPassword">Password</label>
+        <input class="form-control" id="loginPassword" type="password"
+          autocomplete="current-password" placeholder="Enter your password" required>
+        <button class="password-toggle" id="togglePassword" type="button"
+          aria-label="Show password" aria-pressed="false">Show</button>
+      </div>
+      <p id="loginError" class="login-error" role="alert"></p>
+      <button class="btn primary login-submit" type="submit">Log in →</button>
+    </form>
+
+    <button class="small-btn" id="showRegister" type="button">Create household account</button>
+    <form id="registerForm" class="login-form hidden" novalidate>
+      <div class="field"><label for="registerName">Household name</label><input class="form-control" id="registerName" required maxlength="100" placeholder="Your name"></div>
+      <div class="field"><label for="registerPhone">Phone number</label><input class="form-control" id="registerPhone" type="tel" inputmode="numeric" pattern="[0-9]{10}" maxlength="10" required placeholder="10-digit phone number"></div>
+      <div class="field"><label for="registerPassword">Create password</label><input class="form-control" id="registerPassword" type="password" minlength="6" required placeholder="At least 6 characters"></div>
+      <p id="registerError" class="login-error" role="alert"></p>
+      <button class="btn primary login-submit" type="submit">Create account →</button>
+    </form>
+    <div class="demo-credentials">
+      <b>Demo credentials</b>
+      <div>Admin: 9000000001 / EcoAdmin@123</div>
+      <div>Collector: 9000000002 / EcoCollect@123</div>
+      <div>Verifier: 9000000003 / EcoVerify@123</div>
+      <div>Customer: 9000000004 / EcoHome@123</div>
+      <small>Customer demo card: SS-1024. Approved bags earn 10 GP/kg. Create a household account to get a unique card ID. Demo accounts and records are saved in this browser on this device.</small>
+    </div>
+  </div>
+</div>
+
+<!-- General modal -->
+<div class="modal-backdrop" id="modalBackdrop"
+  onclick="if(event.target===this)closeModal()">
+  <div class="modal">
+    <div class="modal-head">
+      <h3 id="modalTitle">New collection</h3>
+      <button class="close" onclick="closeModal()">✕</button>
+    </div>
+    <div id="modalContent"></div>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<footer class="footer">
+  <div class="wrap footin">
+    <div class="brand">
+      <span class="logo">♻</span>
+      <span>ECO Bengaluru<small>SMART WASTE • CLEAN CITY</small></span>
+    </div>
+    <div>Prototype concept • Demo data, not official municipal statistics</div>
+    <div class="footlinks">
+      <a href="#features">About</a>
+      <a href="#report">Support</a>
+      <a href="#how">How it works</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+(() => {
+  const intro = document.getElementById('intro');
+  if (!intro) return;
+  let closed = false;
+  let loaderTimer;
+  let closeTimer;
+  const close = () => {
+    if (closed) return;
+    closed = true;
+    clearTimeout(loaderTimer);
+    clearTimeout(closeTimer);
+    intro.style.opacity = '0';
+    setTimeout(() => intro.remove(), 500);
+  };
+  const skip = intro.querySelector('.intro-skip');
+  skip.addEventListener('click', close);
+  intro.addEventListener('click', (event) => {
+    if (event.target === intro) close();
+  });
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape' && !closed) close();
+  });
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    loaderTimer = setTimeout(close, 1200);
+  } else {
+    loaderTimer = setTimeout(() => {
+      if (closed) return;
+      intro.setAttribute('data-s', 'loader');
+      closeTimer = setTimeout(close, 6000);
+    }, 1700);
+  }
+})();
+</script>
+<script src="script.js" defer></script>
+</body>
+</html>
+
+
+
+
+
+
